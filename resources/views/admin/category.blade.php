@@ -83,7 +83,7 @@
          
       </div>
       <!-- partial:partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: #2b124c;">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: black;">
        
         <ul class="nav">
           <li class="nav-item profile">
@@ -145,7 +145,7 @@
       <!-- partial -->
       <div class="container-fluid page-body-wrapper">
         <!-- partial:partials/_navbar.html -->
-        <nav class="navbar p-0 fixed-top d-flex flex-row" style="background-color: #2b124c;">
+        <nav class="navbar p-0 fixed-top d-flex flex-row" style="background-color: black;">
        
           <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
             <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -162,8 +162,8 @@
                     </li>
                   </div>
 </nav>
-<div class="main-panel" style="background-color: #dfb6b2;">
-    <div class="content-wrapper" style="background-color: #dfb6b2;">
+<div class="main-panel" style="background-color: darkgray;">
+    <div class="content-wrapper" style="background-color: darkgray;">
     <body >
     <div class="container-scroller" style="background-color: blue;">
       <div class="row p-0 m-0 proBanner" id="proBanner">
@@ -171,7 +171,7 @@
          
       </div>
       <!-- partial:partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: #2b124c;">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: black;">
        
         <ul class="nav">
           <li class="nav-item profile">
@@ -233,7 +233,7 @@
       <!-- partial -->
       <div class="container-fluid page-body-wrapper">
         <!-- partial:partials/_navbar.html -->
-        <nav class="navbar p-0 fixed-top d-flex flex-row" style="background-color: #2b124c;">
+        <nav class="navbar p-0 fixed-top d-flex flex-row" style="background-color: black;">
        
           <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
             <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -250,8 +250,8 @@
                     </li>
                   </div>
 </nav>
-<div class="main-panel" style="background-color: #dfb6b2;">
-    <div class="content-wrapper" style="background-color: #dfb6b2;">
+<div class="main-panel" style="background-color: darkgray;">
+    <div class="content-wrapper" style="background-color: darkgray;">
 
     @if(session()->has('message'))
 <div class="alert alert-success alert-dismissible fade show" role="alert">

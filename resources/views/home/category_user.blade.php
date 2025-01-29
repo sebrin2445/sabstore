@@ -25,7 +25,7 @@
   
 <style>
   body{
-    color: #2b124c;
+    color: black;
   }
     .divcent{
 text-align: center;
@@ -35,7 +35,7 @@ color: white;
     .h2font{
         font-size: 40px;
         padding-bottom: 40px;
-        color: #2b124c;
+        color: black;
     }
     .inputcol{
         color: black;
@@ -48,8 +48,8 @@ color: white;
         border: 3px solid white;
     }
     .th_col{
-        background-color: #2b124c;
-        color: #dfb6b2;
+        background-color: black;
+        color: darkgray;
     }
     .container-scroller {
         overflow: auto; /* allows scrolling */
@@ -68,7 +68,7 @@ color: white;
          
       </div>
       <!-- partial:partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: #2b124c;">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: black;">
        
         <ul class="nav">
           <li class="nav-item profile">
@@ -114,7 +114,7 @@ color: white;
       <!-- partial -->
       <div class="container-fluid page-body-wrapper">
         <!-- partial:partials/_navbar.html -->
-        <nav class="navbar p-0 fixed-top d-flex flex-row" style="background-color: #2b124c;">
+        <nav class="navbar p-0 fixed-top d-flex flex-row" style="background-color: black;">
        
           <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
             <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -127,12 +127,26 @@ color: white;
         
             
                     <li>
-                        <x-app-layout></x-app-layout>
+                    <ul class="navbar-nav navbar-nav-right">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" data-bs-toggle="dropdown">
+                  {{ Auth::user()->name }}
+                </a>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <a class="dropdown-item" href="{{ route('profile.show') }}">Edit Profile</a>
+                  <div class="dropdown-divider"></div>
+                  <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="dropdown-item text-danger">Logout</button>
+                  </form>
+                </div>
+              </li>
+            </ul>
                     </li>
                   </div>
 </nav>
-<div class="main-panel" style="background-color: #dfb6b2;">
-    <div class="content-wrapper" style="background-color: #dfb6b2;">
+<div class="main-panel" style="background-color: darkgray;">
+    <div class="content-wrapper" style="background-color: darkgray;">
 
     @if(session()->has('message'))
 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -146,7 +160,7 @@ color: white;
         <form action="{{url('/add_category')}}" method="POST">
             @csrf
             <input type="text" name="category"  class ="inputcol" placeholder="write category name">
-            <input type="submit" class="btn btn-primary" name="submit" value="Add Category" style="background-color: #2b124c;">
+            <input type="submit" class="btn btn-primary" name="submit" value="Add Category" style="background-color: black;">
         </form>
     </div>
     <table class="center">

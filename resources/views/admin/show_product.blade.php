@@ -302,7 +302,7 @@
                 <td>{{$product->price}}</td>
                 <td>{{$product->discount_price}}</td>
                 <td>
-                  <img src="/product/{{$product->image}}" alt="">
+                  <img  src="/product/{{$product->image}}" alt="">
                 </td>
                 <td>
                   <a onclick="return confirm('are you sure you want to delete this')" class="btn btn-danger" href="{{url('delete_product',$product->id)}}">Delete</a>

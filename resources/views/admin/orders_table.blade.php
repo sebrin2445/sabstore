@@ -25,7 +25,7 @@
   
 <style>
     body{
-    color: #2b124c;
+    color: black;
   }
     .divcent{
 text-align: center;
@@ -51,8 +51,8 @@ color: white;
         height: 150px;
     }
     .th_col{
-        background-color: #2b124c;
-        color: #dfb6b2;
+        background-color: black;
+        color: darkgray;
     }
     
     .th_deg{
@@ -76,7 +76,7 @@ color: white;
          
       </div>
       <!-- partial:partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: #2b124c;">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: black;">
        
         <ul class="nav">
           <li class="nav-item profile">
@@ -143,7 +143,7 @@ color: white;
       <!-- partial -->
       <div class="container-fluid page-body-wrapper">
         <!-- partial:partials/_navbar.html -->
-        <nav class="navbar p-0 fixed-top d-flex flex-row" style="background-color: #2b124c;">
+        <nav class="navbar p-0 fixed-top d-flex flex-row" style="background-color: black;">
        
           <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
             <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -155,13 +155,23 @@ color: white;
            
         
             
-                    <li>
-                        <x-app-layout></x-app-layout>
-                    </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" data-bs-toggle="dropdown">
+                  {{ Auth::user()->name }}
+                </a>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <a class="dropdown-item" href="{{ route('profile.show') }}">Edit Profile</a>
+                  <div class="dropdown-divider"></div>
+                  <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="dropdown-item text-danger">Logout</button>
+                  </form>
+                </div>
+              </li>
                   </div>
 </nav>
-<div class="main-panel" style="background-color: #dfb6b2;">
-    <div class="content-wrapper" style="background-color: #dfb6b2;">
+<div class="main-panel" style="background-color: darkgray;">
+    <div class="content-wrapper" style="background-color: darkgray;">
 
         
     @if(session()->has('message'))
@@ -222,7 +232,7 @@ color: white;
           <td>{{$order->delivery_status}}</td>
 
           <td> 
-            <img src="/product/{{$order->image}}" alt="">
+            <img style="max-width: 100px;" src="/product/{{$order->image}}" alt=""  >
           </td>
           <td>
             @if($order->delivery_status=='processing')

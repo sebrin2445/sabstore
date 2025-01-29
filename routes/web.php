@@ -106,6 +106,7 @@ route::get('/show_user_product',[HomeController::class,'show_user_product']);
 route::get('/user_contact',[HomeController::class,'user_contact']);
 
 route::get('/show_info',[HomeController::class,'show_info']);
+route::get('/view_user',[AdminController::class,'view_user']);
 
 route::post('/add_user_product',[HomeController::class,'add_user_product']);
 

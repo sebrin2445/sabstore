@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Models\Order;
 use App\Models\productss;
+use App\Models\User;
 use App\Models\UserContact;
 use Illuminate\Http\Request;
 
@@ -139,5 +140,12 @@ return redirect()->back()->with('message','Product Updated SuccessFully');
 $searchText=$request->search;
 $order=Order::where('name','LIKE',"%$searchText%")->orWhere('product_title','LIKE',"%$searchText%")->get();
 return view('admin.orders_table',compact('order'));
+    }
+
+
+
+    public function view_user(){
+        $users=User::all();
+        return view('admin.view_user',compact('users'));
     }
 }

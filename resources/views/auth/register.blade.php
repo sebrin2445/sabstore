@@ -1,31 +1,7 @@
-<style>
-      *{
-       
-    }
-    .navbar-brand{
-        display: flex;
-
-    }
-    .navbar-brand span{
-        letter-spacing: 5px;
-        font-size: 40px;
-        font-weight: 900;
-        color: black;
-margin-top: 10px;
-    }
-    form x-input{
-        color: #2b124c;
-    }
-</style>
-
-
-
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-        <a class="navbar-brand" href="{{url('/')}}" style="text-decoration: none; color:#FF3B3B; padding-top:60px"><img width="70" src="images/logosab.jpeg" alt="#" style="border-radius: 50%; "/> <span style=""  > s<sub>A</sub>b<sub style="color: #2b124c;">store</sub></span> </a>
-
-         
+            <x-authentication-card-logo />
         </x-slot>
 
         <x-validation-errors class="mb-4" />
@@ -41,14 +17,6 @@ margin-top: 10px;
             <div class="mt-4">
                 <x-label for="email" value="{{ __('Email') }}" />
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            </div>
-            <div class="mt-4">
-                <x-label for="phone" value="{{ __('phone') }}" />
-                <x-input id="phone" class="block mt-1 w-full" type="number" name="phone" :value="old('phone')" required autocomplete="username" />
-            </div>
-            <div class="mt-4">
-                <x-label for="address" value="{{ __('address') }}" />
-                <x-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required autocomplete="username" />
             </div>
 
             <div class="mt-4">
@@ -83,7 +51,7 @@ margin-top: 10px;
                     {{ __('Already registered?') }}
                 </a>
 
-                <x-button class="ms-4" style="background-color: #2b124c;">
+                <x-button class="ms-4">
                     {{ __('Register') }}
                 </x-button>
             </div>

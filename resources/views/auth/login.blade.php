@@ -1,34 +1,7 @@
-<style>
-   *{
-       
-    }
-    .navbar-brand{
-        display: flex;
-
-    }
-    .navbar-brand span{
-        letter-spacing: 5px;
-        font-size: 40px;
-        font-weight: 900;
-        color: black;
-margin-top: 10px;
-    }
-    form input{
-        color: #2b124c;
-    }
-</style>
-
-
-<html>
-<body>
-    
-
-
-<x-guest-layout  class="blue">
+<x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-        <a class="navbar-brand" href="{{url('/')}}" style="text-decoration: none; color:#FF3B3B; padding-top:0px"><img width="70" src="images/logosab.jpeg" alt="#" style="border-radius: 50%; "/> <span style=""  > s<sub>A</sub>b<sub style="color: #2b124c;">store</sub></span> </a>
-
+            <x-authentication-card-logo />
         </x-slot>
 
         <x-validation-errors class="mb-4" />
@@ -39,7 +12,7 @@ margin-top: 10px;
             </div>
         @endif
 
-        <form method="POST" action="{{ route('login') }}" >
+        <form method="POST" action="{{ route('login') }}">
             @csrf
 
             <div>
@@ -66,11 +39,10 @@ margin-top: 10px;
                     </a>
                 @endif
 
-                <x-button class="ms-4" style="background-color: #2b124c;">
+                <x-button class="ms-4">
                     {{ __('Log in') }}
                 </x-button>
             </div>
         </form>
     </x-authentication-card>
 </x-guest-layout>
-</body>

@@ -12,7 +12,7 @@
       <meta name="description" content="" />
       <meta name="author" content="" />
       <link rel="shortcut icon" href="images/favicon.jpeg" type="">
-      <title>Sab-ecommerce</title>
+      <title>yegna-ecommerce</title>
       <!-- bootstrap core css -->
       <link rel="stylesheet" type="text/css" href="home/css/bootstrap.css" />
       <!-- font awesome style -->

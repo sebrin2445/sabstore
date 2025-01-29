@@ -115,7 +115,7 @@
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="{{url('/usersell')}}">Add Products</a></li>
                 <li class="nav-item"> <a class="nav-link" href="{{url('/show_user_product')}}">Show Products</a></li>
-                <li class="nav-item"> <a class="nav-link" href="{{url('/user_contact')}}">Add info</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{url('/user_user')}}">Add info</a></li>
               </ul>
             </div>
           </li>
@@ -180,30 +180,32 @@
             @endif
 
             <div class="divcent">
-              <h2 class="h2font">Show Info </h2>
+              <h2 class="h2font">Show User </h2>
 
             </div>
             <table class="center">
               <tr class="th_col">
-                <th class="th_deg">Name</th>
-                <th class="th_deg">Phone</th>
+                <th class="th_deg">ID</th>
+                <th class="th_deg">Namme</th>
                 <th class="th_deg">Email</th>
+                <th class="th_deg">Phone</th>
                 <th class="th_deg">Address</th>
                 <th class="th_deg">Delete</th>
                 <th class="th_deg">Update</th>
-             @foreach($contact as $contact)
+             @foreach($users as $user)
               <tr>
-                <td>{{$contact->name}}</td>
+                <td>{{$user->id}}</td>
 
-                <td>{{$contact->phone}}</td>
-                <td>{{$contact->email}}</td>
-                <td>{{$contact->address}}</td>
+                <td>{{$user->name}}</td>
+                <td>{{$user->email}}</td>
+                <td>{{$user->phone}}</td>
+                <td>{{$user->address}}</td>
 
                 <td>
-                  <a onclick="return confirm('are you sure you want to delete this')" class="btn btn-danger" href="{{url('delete_contact',$contact->id)}}">Delete</a>
+                  <a onclick="return confirm('are you sure you want to delete this')" class="btn btn-danger" href="">Delete</a>
                 </td>
                 <td>
-                  <a class="btn btn-success" href="{{url('update_contact',$contact->id)}}">Edit</a>
+                  <a class="btn btn-success" href="">Edit</a>
                 </td>
 
               </tr>

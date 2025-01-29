@@ -19,12 +19,12 @@
         font-size: 35px;
         font-weight: 900;
         color: #fbe4db;
-margin-top: 10px;"  > s<sub>A</sub>b<sub style="color: #2b124c;">store</sub></span> </a>
+margin-top: 10px;"  > Ye<sub>gn</sub>a<sub  style="color: #2b124c;">store</sub></span> </a>
                       </div>
                       <div class="information_f">
-                        <p><strong>ADDRESS:</strong> 28 White tower, Street Name New York City, USA</p>
-                        <p><strong>TELEPHONE:</strong> +91 987 654 3210</p>
-                        <p><strong>EMAIL:</strong> yourmain@gmail.com</p>
+                        <p><strong>ADDRESS:</strong> Mexico,shebele</p>
+                        <p><strong>TELEPHONE:</strong> +2519 23451210</p>
+                        <p><strong>EMAIL:</strong> yegnastore@gmail.com</p>
                       </div>
                    </div>
                </div>

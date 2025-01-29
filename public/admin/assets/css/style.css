@@ -20824,7 +20824,7 @@ div.tagsinput {
   flex-direction: column; }
   @media (max-width: 991px) {
     .main-panel {
-      margin-left: 0;
+      margin-left: 100;
       width: 100%; } }
 
 .content-wrapper {
